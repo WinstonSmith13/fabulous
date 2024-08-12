@@ -5,7 +5,6 @@ import FullLengthSequences from "./FullLengthSequences";
 import RegionsAndSequences from "./RegionsAndSequences";
 
 interface AbDict {
-  oriented_input: string;
   species: string;
   chain: string;
   isotype: string;
@@ -13,15 +12,24 @@ interface AbDict {
   vdj_nt: string;
 }
 
-export default function SearchResults({ abDict }: { abDict?: AbDict }) {
-  if (abDict == undefined) {
+interface SearchResultsProps {
+  abSequence: string;
+  abDict?: AbDict;
+}
+
+export default function SearchResults({
+  abSequence,
+  abDict,
+}: SearchResultsProps) {
+  console.debug(abDict);
+  if (abDict === null) {
     return;
   }
   return (
     <>
       <Grid container spacing={6}>
         <Overview
-          identifier={abDict.oriented_input}
+          identifier={abSequence}
           chainType={abDict.chain}
           species={abDict.species}
           isotypeAndSubclass={abDict.isotype}
@@ -36,7 +44,6 @@ export default function SearchResults({ abDict }: { abDict?: AbDict }) {
             ></FullLengthSequences>
           </Stack>
         </Grid>
-
         <Grid xs={6}>
           <Stack direction="column" spacing={2}>
             <RegionsAndSequences></RegionsAndSequences>

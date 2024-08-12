@@ -10,7 +10,7 @@ import SearchResults from "./searchResults/SearchResults";
 
 export default function SearchBox() {
   const [abSequence, setAbSequence] = useState("");
-  const [abDict, setAbDict] = useState(undefined);
+  const [abDict, setAbDict] = useState(null);
 
   async function search() {
     const response = await axios.get(
@@ -19,13 +19,6 @@ export default function SearchBox() {
     );
     setAbDict(response.data);
   }
-
-  function populateDummySequence() {
-    setAbSequence(
-      "EGQLLESGGGLAQPGGSLRLSCTASGFTFSKNAMNWVRQAPGKRLEWVAGIIGNGSDTYYADSVKGRFTISRDNSKNTVSLQMNSLRAEDSAIYYCAKDRHPWRWLQLFDSWGQGTLVTVSS",
-    );
-  }
-
   return (
     <>
       <Stack direction="row" spacing={2} width={800}>
@@ -39,14 +32,13 @@ export default function SearchBox() {
         <Textarea
           name="sequence"
           value={abSequence}
-          onChange={(e) => {
-            e.stopPropagation();
-            setAbSequence(e.target.value);
-          }}
+          onChange={(e) => setAbSequence(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter") {
+            if (e.keyCode === 13) {
               e.preventDefault();
               search();
+            } else {
+              null;
             }
           }}
           placeholder="Add one or multiple NT or AA sequence(s) in raw or FASTA format"
@@ -60,12 +52,11 @@ export default function SearchBox() {
       </Stack>
 
       <p className="hint">
-        <Link component="a" onClick={populateDummySequence}>
+        <Link component="a">
           Don't have any antibody? Click here to load a dummy sequence
         </Link>
       </p>
-      <br></br>
-      <SearchResults abDict={abDict}></SearchResults>
+      <SearchResults abSequence={abSequence} abDict={abDict}></SearchResults>
     </>
   );
 }
