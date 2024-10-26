@@ -1,0 +1,58 @@
+/* Styles pour la barre de navigation */
+.navbar {
+    background-color: rgba(51, 51, 51, 0.9); /* Couleur semi-transparente pour un effet flottant */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Espacement plus généreux */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+    backdrop-filter: blur(10px); /* Effet de flou pour un look moderne */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Logo aligné à gauche */
+.logo_header {
+    width: 150px; /* Taille responsive du logo */
+    height: auto; /* Maintient le ratio d'aspect */
+    transition: transform 0.3s ease; /* Animation du logo */
+}
+
+.logo_header:hover {
+    transform: scale(1.1); /* Zoom léger sur le logo lors du survol */
+}
+
+/* Liste des liens */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+/* Liens dans la navbar */
+.navbar-links a {
+    color: #f5f5f5;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar-links a:hover {
+    background-color: #555;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre lors du survol */
+}
+
+/* Effet sticky pour le contenu principal */
+.content {
+    margin-top: 80px; /* Ajuste la marge pour que le contenu ne soit pas caché sous la navbar */
+    padding: 20px;
+}
