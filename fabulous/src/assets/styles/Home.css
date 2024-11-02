@@ -1,0 +1,40 @@
+
+.homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+/* Style pour la description */
+.description_landing{
+font-family: 'Inter', serif;
+  width: 800px;
+  height: 116px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  color: #FFFFFF;
+  flex: none;
+
+  align-self: stretch;
+
+  
+  }
+
+/* Styles pour la SearchBox */
+.searchBox {
+    width: 100%;
+    max-width: 600px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

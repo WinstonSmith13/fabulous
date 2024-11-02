@@ -4,38 +4,27 @@
 :root {
   --primary-color: #646cff;
   --secondary-color: #535bf2;
-  --background-color: #242424;
+  --background-color: #4FC49D;
   --text-color-light: rgba(255, 255, 255, 0.87);
   --text-color-dark: #213547;
 }
 
 /* Typographie globale et reset */
 body, html {
+  font-family: 'Inknut Antiqua', serif;
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: var(--text-color-light);
   background-color: var(--background-color);
   line-height: 1.5;
 }
 
-/* Liens globaux */
+
+
 a {
-  color: var(--primary-color);
   text-decoration: none;
 }
-a:hover {
-  color: var(--secondary-color);
-}
 
-/* Styles responsifs */
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #ffffff;
-    color: var(--text-color-dark);
-  }
-  a:hover {
-    color: #747bff;
-  }
-}
+
+

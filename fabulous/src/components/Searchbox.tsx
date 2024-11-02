@@ -1,10 +1,10 @@
-import { Stack } from "@mui/joy";
+
 import Select from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
 import Button from "@mui/joy/Button";
 import Textarea from "@mui/joy/Textarea";
 import { useState } from "react";
-import SearchResults from "./searchResults/SearchResults";
+// import SearchResults from "./searchResults/SearchResults";
 import { fetchAntibodyData } from "../services/antibodyService"; // Import de la fonction de service
 
 
@@ -36,7 +36,8 @@ setAbSequence("GCTGGGTTTTCCTTGTTGCTATTCTCGAGGGTGTCCAGTGTGAGGGCCAGCTGCTGGAGTCTGGA
 
   return (
     <>
-      <Stack direction="row" spacing={2} width={800}>
+    <div className="searchBoxContainer">
+    <div className="searchBox">
         <Select defaultValue="human" name="species">
           <Option value="human">Human</Option>
           <Option value="mouse">Mouse</Option>
@@ -51,13 +52,11 @@ setAbSequence("GCTGGGTTTTCCTTGTTGCTATTCTCGAGGGTGTCCAGTGTGAGGGCCAGCTGCTGGAGTCTGGA
           onKeyDown={handleKeyDown}
           placeholder="Add one or multiple NT or AA sequence(s)"
           required
-          sx={{ width: 600 }}
         />
 
         <Button color="primary" onClick={handleSearch}>
           Search
         </Button>
-      </Stack>
 
       <p className="hint">
         <Button onClick={loadRandomSequence}>
@@ -66,7 +65,9 @@ setAbSequence("GCTGGGTTTTCCTTGTTGCTATTCTCGAGGGTGTCCAGTGTGAGGGCCAGCTGCTGGAGTCTGGA
       </p>
 
 
-      <SearchResults abSequence={abSequence} abDict={abDict} />
+      {/* <SearchResults abSequence={abSequence} abDict={abDict} /> */}
+      </div>
+    </div>
     </>
   );
 }

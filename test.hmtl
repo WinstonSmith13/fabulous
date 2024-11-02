@@ -1,0 +1,384 @@
+%limit_once%
+
+<style>
+
+body.uxbilling__prestripe_flow #HeaderDeonto.stripe_flow { display: block !important; }
+
+
+
+.stripe_flow .line1 {
+	width: 100%;
+	display: %vendor_prefixes%flex;
+	%vendor_prefixes%justify-content: space-between;
+	%vendor_prefixes%align-items: center;
+}
+
+.stripe_flow .line2, .stripe_flow .line3, .stripe_flow .line4 {
+	width: 100%;
+	font-size: 11px;
+	display: %vendor_prefixes%flex;
+	%vendor_prefixes%justify-content: space-between;
+	%vendor_prefixes%align-items: center;
+}
+
+.stripe_flow .line1 .descr {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.stripe_flow .line1 .price {
+	font-size: 17px;
+}
+
+.stripe_flow .line1 .price span {
+	font-weight: bold;
+}
+
+.stripe_flow .line2 .descr, .stripe_flow .line3 .descr {
+	font-size: 11px;
+}
+
+.stripe_flow .offer_info {
+	font-size: 10px;
+	color: #9e9e9e;
+	margin: 8px auto 0;
+	text-align: justify;
+}
+</style>
+<div style="display:none;">
+	<div class="stripe_recap_content">
+			<div class="line1">
+				<p class="descr">PROMO 7 JOURS D'ESSAI</p>
+				<p class="price">EUR <span>0.99 €</span></p>
+			</div>
+			<?php if (nauticonf('directory')!='busuprfr') { ?>
+			<div class="line2">
+				<p class="descr">1x Pass Premium*</p>
+				<p class="price">INCLUS</p>
+			</div>
+			<?php } ?>
+			
+			<?php if (nauticonf('directory')=='pmbj') { ?>
+			
+				<div class="line3">
+					<p class="descr">3000 jeux mobiles en téléchargement illimité</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<div class="line4">
+					<p class="descr">1x accès Mobile/Tablette/Desktop</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Premium Mobijeux : Des milliers de jeux mobiles en illimité (HTML/Android), dans le cadre de l’offre mensuelle, 0.99€ les 7 premiers jours puis 9.99€/mois, sans engagement de durée.</p>
+			
+			<?php } elseif (nauticonf('directory')=='busuprfr') { ?>
+
+				<div class="line2">
+					<p class="descr">Accès illimité à Busuu Premium*</p>
+						
+				</div>
+				<div class="line4">
+					<p class="descr">Mode hors ligne et 0 publicité</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<div class="line4">
+					<p class="descr">14 langues et + de 60 000 leçons classées par thème</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<div class="line4">
+					<p class="descr">Plan d'étude personnalisé et Certificat de niveau</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Busuu Premium : Travail, culture, vacances, éducation,… quel que soit votre besoin apprenez et parlez la langue de votre choix avec Busuu. Profitez dès à présent de Busuu premium pour 0,99€ la première semaine puis 9,99€ TTC par mois. Vous aurez un accès illimité à Busuu et c’est sans engagement !</p>
+				
+			<?php } elseif (nauticonf('directory')=='plgfr') { ?>
+
+				<div class="line4">
+					<p class="descr">1x accès Mobile/Tablette/Desktop</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Premium LaLiga Xtra : résultats, classements, actus, vidéos et live texte commenté en illimité, dans le cadre de l’offre mensuelle, 0.99€ les 7 premiers jours puis 9.99€/mois, sans engagement de durée.</p>
+
+			<?php } elseif (nauticonf('directory')=='pfuze') { ?>
+				<div class="line3">
+					<p class="descr">2000 jeux en téléchargement illimité</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<div class="line4">
+					<p class="descr">-20% sur tout le catalogue de jeux PC</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Premium Fuze Forge : Des milliers de jeux vidéo à télécharger en illimité, dans le cadre de l’offre mensuelle, 0.99€ les 7 premiers jours puis 9.99€/mois, sans engagement de durée.</p>
+
+			<?php } elseif (nauticonf('directory')=='ppv') { ?>
+
+				<div class="line4">
+					<p class="descr">1x accès Mobile/Tablette/Desktop</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Premium PlayVOD : Des milliers de films en streaming à choisir dans le catalogue pass, dans le cadre de l’offre mensuelle 12 crédits/mois (jusqu’à 12 films par mois) 7 premiers jours à 0.99 euro puis 9.99€/mois, sans engagement de durée.</p>
+
+			<?php } elseif (nauticonf('directory')=='pbnl') { ?>
+
+				<div class="line4">
+					<p class="descr">1x accès Mobile/Tablette/Desktop</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Premium Buzz No Limit : Des centaines de vidéos buzz, choc, people, news, films et séries en streaming illimité, sans engagement de durée.</p>
+
+			<?php } elseif (nauticonf('directory')=='pcns') { ?>
+				<div class="line3">
+					<p class="descr">Matchs en direct live text</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<div class="line4">
+					<p class="descr">1x accès Mobile/Tablette/Desktop</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Premium Clic'n'scores : Suivez les compétitions et les tournois les plus prestigieux, dans le cadre de l’offre mensuelle, 0.99€ les 7 premiers jours puis 9.99€/mois, sans engagement de durée.</p>
+
+			<?php } elseif (nauticonf('directory')=='pjat') { ?>
+				<div class="line3">
+					<p class="descr">10 crédit offert à la souscription</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<div class="line4">
+					<p class="descr">-20% sur tout le catalogue de jeux PC</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Premium Jeu-a-telecharger : Des milliers de jeux vidéo à télécharger, dans le cadre de l’offre mensuelle 20 crédits/mois, 0.99€ les 7 premiers jours puis 9.99€/mois, sans engagement de durée.</p>
+			
+			<?php } elseif (nauticonf('directory')=='pplp') { ?>
+
+				<div class="line4">
+					<p class="descr">1x accès Mobile/Tablette/Desktop</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Premium PlayUP : Des milliers de chansons et clips vidéos en écoute et téléchargement illimité, 7 premiers jours à 0.99 euros puis 9.99 euros par mois sans engagement de durée.</p>
+
+			<?php } elseif (nauticonf('directory')=='pvdz') { ?>
+
+				<div class="line4">
+					<p class="descr">1x accès Mobile/Tablette/Desktop</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Pass Premium Veedz : Des centaines de vidéos films et séries en streaming illimité, qui s'adaptent à vos dispos, sans engagement de durée.</p>
+
+			<?php } elseif (nauticonf('directory')=='pwzchat') { ?>
+				<div class="line3">
+					<p class="descr">Messagerie en illimité</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<div class="line4">
+					<p class="descr">Tchat online avec des milliers de célibataires</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Dans le cadre de l’offre mensuelle en accès illimité de 0,99€ les 7 premiers jours puis 9,99€/mois, sans engagement de durée.</p>
+
+			<?php } elseif (nauticonf('directory')=='pwzg') { ?>
+				<div class="line3">
+					<p class="descr">Messagerie en illimité</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<div class="line4">
+					<p class="descr">Rencontres avec plus de 500 000 célibataires</p>
+					<p class="price">INCLUS</p>
+				</div>
+				<p class="offer_info">*Dans le cadre de l’offre mensuelle en accès illimité de 0,99€ les 7 premiers jours puis 9,99€/mois, sans engagement de durée.</p>
+
+			<?php } elseif (nauticonf('directory')=='pysfr') { ?>
+				<p class="offer_info">*Pass Premium Youscribe : Des milliers de livres, BD, documents, magazines et audiolivres à parcourir avec et sans connexion, dans le cadre de de l’offre mensuelle illimitée, 0,99€ les 7 premiers jours puis 9,99€ par mois, sans engagement de durée</p>
+
+			<?php } elseif (nauticonf('directory')=='pqtvfr') { ?>
+				<p class="offer_info">*Pass Premium Qwest TV : Une sélection unique de concerts, documentaires, joyaux d'archives et interviews exclusives et en illimité, réalisées par Quincy Jones et son équipe d'experts, dans le cadre de de l’offre mensuelle illimitée, 0,99€ les 7 premiers jours puis 9,99€ par mois, sans engagement de durée</p>
+
+			<?php } ?>
+			
+		</div>
+	</div>
+
+
+
+<script>
+addEvent(document,"flow_event",function(fkevent) {
+	if (typeof(fkevent)!=="object") return;
+	var event=fkevent.result;
+	
+	
+	if ((event.type=='load_flow') || (event.type=='display_step') || (event.status=="operator_change")) {
+		
+		
+		<?php if ((nauticonf('ppv')) && (($avail_varsys['seo_kw']['oneshot']) || ($avail_varsys['seo_kw']['creditsPack']))) { ?>
+			
+			lp_conf.dico = {
+				"attr_currency": {"EUR": "€", },
+				"attr_billingmode": {"Subscription": "abo", },
+				"attr_trialperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+				"attr_recurringperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+			};
+			
+			
+			var mentions = offerTxt({
+				dico: lp_conf.dico,
+				default: "{attr_price} {attr_currency}",	//default
+			});
+			querySelectorAll_do(".mentiondeonto, #HeaderDeonto",{innerHTML: mentions});
+			
+		<?php } elseif (in_array(nauticonf('directory'),["ppv"])) { ?>
+			
+			lp_conf.dico = {
+				"attr_currency": {"EUR": "€", },
+				"attr_billingmode": {"Subscription": "abo", },
+				"attr_trialperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+				"attr_recurringperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+			};
+
+			
+			var mentions = offerTxt({
+				dico: lp_conf.dico,
+				default: "{attr_billingmode} : {attr_price} {attr_currency} par {attr_recurringperiod} sans engagement",	//default
+				if_oneshot: "{attr_price} {attr_currency}",
+				if_nocarrier: { default: 'abo : 3 € par semaine' },
+			
+			//	if_trial: "{attr_trial_price} {attr_currency} pendant {attr_trial_iteration} {attr_trialperiod} puis {attr_billingmode} : {attr_price} {attr_currency} par {attr_recurringperiod} sans engagement",
+
+			if_trial: function(dataobj) {
+										
+					if ((dataobj.offer.attr_trial_price == 0) && (/daily/i.test(dataobj.offer.attr_trialperiod))) return "1er jour offert puis abo : {attr_price} {attr_currency} par {attr_recurringperiod} sans engagement";
+					if ((dataobj.offer.attr_trial_price == 0) && (/weekly/i.test(dataobj.offer.attr_trialperiod))) return "1ère semaine offerte puis abo : {attr_price} {attr_currency} par {attr_recurringperiod} sans engagement";
+					if ((dataobj.offer.attr_trial_price == 0) && (/monthly/i.test(dataobj.offer.attr_trialperiod))) return "1er mois offert puis abo : {attr_price} {attr_currency} par {attr_recurringperiod} sans engagement";
+					
+					//fallback in case
+					return "{attr_trial_price} {attr_currency} pendant {attr_trial_iteration} {attr_trialperiod} puis abo : {attr_price} {attr_currency} par {attr_recurringperiod} sans engagement";
+				},
+			});
+			querySelectorAll_do(".mentiondeonto, #HeaderDeonto",{innerHTML: mentions});
+			
+			
+			//NB DE CREDITS JM/MATTHIAS:
+			offerTxt({default:function(dataobj) {
+				if (/weekly/i.test(dataobj.offer.attr_recurringperiod)) {
+					var nbcredits="3";
+					if (dataobj.offer.attr_trial_iteration) nbcredits="5"; //ASO
+					else nbcredits="8"; //SSO
+					querySelectorAll_do('.mention_cgv_credit_number',{innerHTML:nbcredits});
+				}
+			}});
+		
+		<?php } elseif (in_array(nauticonf('directory'), ["busuprfr"]) && isset($avail_varsys['user_geoloc']['MMDB_GEOIP2']['MM_ASN']) && $avail_varsys['user_geoloc']['MMDB_GEOIP2']['MM_ASN'] == 15557) { ?>
+			
+			console.log('inthere');
+			lp_conf.dico = {
+				"attr_currency": {"EUR": "euros", },
+				"attr_billingmode": {"Subscription": "abo", },
+				"attr_trialperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+				"attr_recurringperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+			};
+			
+			var mentions = offerTxt({
+				dico: lp_conf.dico,
+				default: "9.99€/mois",	//default
+			});
+			querySelectorAll_do(".mentiondeonto, #HeaderDeonto",{innerHTML: mentions});
+
+			
+		<?php } elseif (in_array(nauticonf('directory'),["pjat"])) { ?>
+			
+			lp_conf.dico = {
+				"attr_currency": {"EUR": "euros", },
+				"attr_billingmode": {"Subscription": "abo", },
+				"attr_trialperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+				"attr_recurringperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+			};
+			
+			var mentions = offerTxt({
+				dico: lp_conf.dico,
+				default: "{attr_billingmode} : {attr_price} {attr_currency} / {attr_recurringperiod}",	//default
+				if_oneshot: "{attr_price} {attr_currency}",
+				if_nocarrier: { default: 'abo : 3 euros / semaine' },
+			
+			//	if_trial: "{attr_trial_price} {attr_currency} pendant {attr_trial_iteration} {attr_trialperiod} puis {attr_billingmode} : {attr_price} {attr_currency} / {attr_recurringperiod}",
+				if_trial: function(dataobj) {
+										
+					if ((dataobj.offer.attr_trial_price == 0) && (/daily/i.test(dataobj.offer.attr_trialperiod))) return "1er jour offert puis abo : {attr_price} {attr_currency} / {attr_recurringperiod}";
+					if ((dataobj.offer.attr_trial_price == 0) && (/weekly/i.test(dataobj.offer.attr_trialperiod))) return "1ère semaine offerte puis abo : {attr_price} {attr_currency} / {attr_recurringperiod}";
+					if ((dataobj.offer.attr_trial_price == 0) && (/monthly/i.test(dataobj.offer.attr_trialperiod))) return "1er mois offert puis abo : {attr_price} {attr_currency} / {attr_recurringperiod}";
+					
+					//fallback in case
+					return "{attr_trial_price} {attr_currency} pendant {attr_trial_iteration} {attr_trialperiod} puis abo : {attr_price} {attr_currency} / {attr_recurringperiod}";
+				},
+			});
+			querySelectorAll_do(".mentiondeonto, #HeaderDeonto",{innerHTML: mentions});
+			
+		<?php } else { ?> /* ALL OTHERS */
+		
+			lp_conf.dico = {
+				"attr_currency": {"EUR": "€", },
+				"attr_billingmode": {"Subscription": "abo", },
+				"attr_trialperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+				"attr_recurringperiod": { "Daily": "jour", "Weekly": "semaine", "Monthly":"mois", "Yearly":"an", },
+			};
+			
+			
+			var mentions = offerTxt({
+				dico: lp_conf.dico,
+				default: "{attr_billingmode} : {attr_price} {attr_currency} / {attr_recurringperiod}",	//default
+				if_oneshot: "{attr_price} {attr_currency}",
+				if_nocarrier: { default: 'abo : 3 € / semaine' },
+				// if_nocarrier: function(dataobj) { 
+				// 	if (lp_conf.asn === 'AS15557') return "1ère semaine offerte puis abo : {attr_price} {attr_currency}/{attr_recurringperiod}";
+				//  	return 'abo : 3 € / semaine'; 
+				//  },
+			
+			//	if_trial: "{attr_trial_price} {attr_currency} pendant {attr_trial_iteration} {attr_trialperiod} puis {attr_billingmode} : {attr_price} {attr_currency} / {attr_recurringperiod}",
+				if_trial: function(dataobj) {
+										
+					if ((dataobj.offer.attr_trial_price == 0) && (/daily/i.test(dataobj.offer.attr_trialperiod))) return "1er jour offert puis abo : {attr_price} {attr_currency}/{attr_recurringperiod}";
+					if ((dataobj.offer.attr_trial_price == 0) && (/weekly/i.test(dataobj.offer.attr_trialperiod))) return "1ère semaine offerte puis abo : {attr_price} {attr_currency}/{attr_recurringperiod}";
+					if ((dataobj.offer.attr_trial_price == 0) && (/monthly/i.test(dataobj.offer.attr_trialperiod))) return "1er mois offert puis abo : {attr_price} {attr_currency}/{attr_recurringperiod}";
+					
+					//fallback in case
+					return "{attr_trial_price} {attr_currency} pendant {attr_trial_iteration} {attr_trialperiod} puis abo : {attr_price} {attr_currency}/{attr_recurringperiod}";
+				},
+			});
+			querySelectorAll_do(".mentiondeonto, #HeaderDeonto",{innerHTML: mentions});
+
+			<?php if (in_array(nauticonf('directory'),["pmmf"])) { ?>
+				//NB DE CREDITS JM/MATTHIAS:
+				offerTxt({default:function(dataobj) {
+					if (/weekly/i.test(dataobj.offer.attr_recurringperiod)) {
+						var nbcredits="3";
+						if (dataobj.offer.attr_trial_iteration) nbcredits="5"; //ASO
+						else nbcredits="8"; //SSO
+						querySelectorAll_do('.mention_cgv_credit_number',{innerHTML:nbcredits});
+					}
+				}});
+			<?php } ?>
+			
+		<?php } ?>
+		
+			
+			
+		
+		/*
+		var mentions = offerTxt({
+			dico: lp_conf.dico,
+		
+			//if carrier is known
+			//default: "{product_commercial_name} Unbegrenzter Zugang zu 2000 Spielen und Videos mit Anleitungen &amp; Tipps für nur {attr_price} {attr_currency} pro {attr_recurringperiod} (inkl MwSt.)​",	//default
+			default: "abo : {attr_price} {attr_currency} par {attr_recurringperiod}",	//default
+			if_trial: "1ère semaine offerte puis abo : {attr_price} {attr_currency} par {attr_recurringperiod}",
+			
+			//if carrier isn't known:
+			if_nocarrier: { //wifi + unknown carrier + multiple offers
+				
+				//prepend: '{product_commercial_name} Unbegrenzter Zugang zu 2000 Spielen und Videos mit Anleitungen &amp; Tipps für nur ',
+				default: 'abo : {attr_price} {attr_currency} par {attr_recurringperiod}', //will display a line for each offer
+				glue: ', ', //in case of multiple offer, separate the list with glue
+				//append: '', //finish with a dot ?
+			},
+		});
+		querySelectorAll_do(".mentiondeonto, #HeaderDeonto",{innerHTML: mentions});
+		*/
+	}
+});
+</script>

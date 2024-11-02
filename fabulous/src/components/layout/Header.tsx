@@ -1,20 +1,21 @@
 import { Outlet, Link } from "react-router-dom";
 import '../../assets/styles/Layout.css';  // On importe les styles CSS spécifiques pour le layout
-import fabulousLogo from "/fabulous.png";
+import fabulousLogo from "/Content.png";
+import ButtonComponent from "../common/ButtonComponent.tsx";
 
 const Layout = () => {
   return (
     <>
       <nav className="navbar">
         <Link to="/">
-          <img src={fabulousLogo} className="logo_header" alt="Fabulous logo" />
+        <p  className="logo_header">Fabulous</p>
         </Link>
         <ul className="navbar-links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"><ButtonComponent className="button_login" value="Login"/></Link>
           </li>
           <li>
-            <Link to="/test">Test</Link>
+          <Link to="/"><ButtonComponent className="button_signup" value="Sign up"/></Link>
           </li>
         </ul>
       </nav>

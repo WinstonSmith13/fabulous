@@ -13,6 +13,16 @@
   min-height: 100vh;
 }
 
+/* App.css */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Inknut Antiqua', serif;
+}
+
+
 /* Composants de carte */
 .card {
   padding: 2em;
@@ -23,12 +33,4 @@
   color: var(--text-color-light);
 }
 
-/* Animation du logo */
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em var(--primary-color));
-}
+
