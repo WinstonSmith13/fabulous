@@ -1,0 +1,67 @@
+/* HTML: <div class="loader"></div> */
+/* .loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #25b09b;
+  animation: l15 1s infinite linear;
+}
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+@keyframes l15{ 
+  100%{transform: rotate(1turn)}
+} */
+
+
+/* HTML: <div class="loader"></div> */
+/* .loader {
+  width: 120px;
+  height: 20px;
+  -webkit-mask: linear-gradient(90deg,#000 70%,#0000 0) left/20% 100%;
+  background:
+   linear-gradient(#000 0 0) left -25% top 0 /20% 100% no-repeat
+   #ddd;
+  animation: l7 1s infinite steps(6);
+}
+@keyframes l7 {
+    100% {background-position: right -25% top 0}
+} */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 70px;
+  height: 26px;
+  background: #3FD97F;
+  --c:no-repeat linear-gradient(#000 0 0);
+  --s:18px 18px;
+  -webkit-mask:
+    var(--c) left  4px top 50%,
+    var(--c) center,
+    var(--c) right 4px top 50%,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  animation: l2 1.5s infinite;
+}
+@keyframes l2 {
+  0%    {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+  16.67%{-webkit-mask-size:var(--s),0    0  ,0    0  ,auto}
+  33.33%{-webkit-mask-size:var(--s),var(--s),0    0  ,auto}
+  50%   {-webkit-mask-size:var(--s),var(--s),var(--s),auto}
+  66.67%{-webkit-mask-size:0    0  ,var(--s),var(--s),auto}
+  83.33%{-webkit-mask-size:0    0  ,0    0  ,var(--s),auto}
+  100%  {-webkit-mask-size:0    0  ,0    0  ,0    0  ,auto}
+}

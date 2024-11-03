@@ -1,4 +1,5 @@
 import SearchResults from "./searchResults/SearchResults";
+import { Link } from "react-router-dom";
 import ButtonComponent from "../components/common/ButtonComponent";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +11,7 @@ export default function SearchBox() {
   const [abSequence, setAbSequence] = useState(""); 
   const [selectedOption, setSelectedOption] = useState("human");
   const [abDict, setAbDict] = useState(null);
+  
 
 
   // async function handleSearch(){
@@ -22,16 +24,9 @@ export default function SearchBox() {
   //   }
   // }
   async function handleSearch() {
-    try {
       console.log('search');
-      const data = await fetchAntibodyData(abSequence);
-      setAbDict(data);
-      
-      navigate('/results', {
-        state: { abSequence: abSequence, abDict: data } // Passer les données via state
-      });
-    } catch (error) {
-      console.error("Error", error);
+      if (abSequence) {
+        navigate("/results", { state: { abSequence } });
     }
   }
 
@@ -78,7 +73,10 @@ export default function SearchBox() {
 
               <div className="button_searchBox">
                 <ButtonComponent className="button_upload" value="Upload" img_src="upload.png" img_className="img_upload_button"/>
-                <ButtonComponent className="button_search" value="Search" onClick={handleSearch} img_src="icons8-loupe.svg" img_className="img_search_button" />
+                {/* <ButtonComponent className="button_search" value="Search" onClick={handleSearch} img_src="icons8-loupe.svg" img_className="img_search_button" /> */}
+                <ButtonComponent onClick={handleSearch} className="button_search" value="Search" img_src="icons8-loupe.svg" img_className="img_search_button" />
+                
+                
               </div>
             </div>
 

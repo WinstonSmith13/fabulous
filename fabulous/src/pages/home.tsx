@@ -1,4 +1,5 @@
 import SearchBox from "../components/Searchbox";
+// import Loader from "../components/common/LoadingComponent.tsx";
 import "../assets/styles/Home.css";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
         <div className="homeContainer">
             <p className="description_landing">All-in-one antibody tool, <br /> fabulously fast.</p>
             <SearchBox />
+            {/* <Loader/> */}
         </div>
     );
 }
