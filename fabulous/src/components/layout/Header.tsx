@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import '../../assets/styles/Header.css';  // On importe les styles CSS spécifiques pour le layout
+import '../../assets/styles/Header.css'; 
 import ButtonComponent from "../../components/common/ButtonComponent.tsx";
 
 
@@ -15,7 +15,7 @@ const Header = () => {
             <Link to="login"><ButtonComponent className="button_login" value="Login"/></Link>
           </li>
           <li>
-          <Link to="/"><ButtonComponent className="button_signup" value="Sign up"/></Link>
+            <Link to="signup"><ButtonComponent className="button_signup" value="Sign up"/></Link>
           </li>
         </ul>
       </nav>
