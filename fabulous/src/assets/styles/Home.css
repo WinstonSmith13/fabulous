@@ -1,33 +1,27 @@
-
 .homeContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    height: calc(100vh - (48px * 2)); /* Soustraire la hauteur du header et footer */
     padding: 20px;
     box-sizing: border-box;
     text-align: center; 
+    overflow: hidden; /* Empêche le défilement */
 }
 
 /* Style pour la description */
-.description_landing{
-font-family: 'Inter', serif;
-  width: 800px;
-  height: 116px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 120%;
-  text-align: center;
-  color: #FFFFFF;
-  flex: none;
-
-  align-self: stretch;
-
-  
-  }
+.description_landing {
+    font-family: 'Inter', serif;
+    width: 800px;
+    height: auto; /* Permet à la hauteur de s'ajuster au contenu */
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0; /* Retire toute marge par défaut */
+}
 
 /* Styles pour la SearchBox */
 .searchBox {
@@ -37,4 +31,5 @@ font-family: 'Inter', serif;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px; /* Espace entre la description et la SearchBox */
 }

@@ -5,5 +5,5 @@ export default function ButtonComponent(props) {
         <button className={props.className}>
             <p>{props.value}</p>
         </button>
-    )
+    );
 }

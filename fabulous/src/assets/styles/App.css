@@ -2,26 +2,16 @@
 
 /* Conteneur principal de l'application */
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0; /* Retirez le padding pour éviter le défilement */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  flex: 1; /* Permet à #root de prendre l'espace disponible */
 }
-
-/* App.css */
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-  font-family: 'Inknut Antiqua', serif;
-}
-
 
 /* Composants de carte */
 .card {

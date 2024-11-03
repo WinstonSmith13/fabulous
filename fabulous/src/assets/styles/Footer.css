@@ -1,7 +1,42 @@
 .footer {
-    padding: 1rem;
-    background-color: white;
-    color: #ffffff;
-    text-align: center;
-    margin-top: 2rem;
-  }
+  background-color: #ffffff;
+  color: #000000;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  bottom: 0;
+  left: 50%; /* Centre horizontalement */
+  transform: translateX(-50%); /* Assure l'alignement parfait au centre */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  height: 48px;
+}
+
+.footer .left_footer,
+.footer .right_footer {
+  display: flex;
+  gap: 16px; /* Espace entre les éléments */
+}
+
+.footer .right_footer {
+  padding-right: 20px;
+}
+
+.footer .left_footer {
+  padding-left: 20px;
+}
+
+.footer p,
+.footer a {
+  color: #000000;
+  font-size: 14px; /* Taille de police plus petite pour un footer */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Souligner les liens au survol */
+}

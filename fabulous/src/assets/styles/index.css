@@ -10,17 +10,21 @@
 }
 
 /* Typographie globale et reset */
-body, html {
-  font-family: 'Inknut Antiqua', serif;
+html, body {  /* Ajoutez html ici */
+  height: 100%; /* Assure que html prend 100% de hauteur */
   margin: 0;
   padding: 0;
-  height: 100%;
   color: var(--text-color-light);
   background-color: var(--background-color);
   line-height: 1.5;
+  display: flex; /* Flexbox pour centrer le contenu */
+  flex-direction: column; /* Aligne les enfants en colonne */
 }
 
-
+body {
+  font-family: 'Inknut Antiqua', serif;
+  flex: 1; /* Permet au body de prendre l'espace restant */
+}
 
 a {
   text-decoration: none;

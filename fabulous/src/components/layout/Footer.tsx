@@ -1,14 +1,19 @@
-import React from 'react';
-import { Typography, Box } from '@mui/joy';
-import '../../assets/styles/Footer.css';
+import '../../assets/styles/Footer.css';  
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <Box className="footer" sx={{ textAlign: 'center', marginTop: '2rem' }}>
-      <Typography>
-        Brought to you by a Fabulous team | 2024
-      </Typography>
-    </Box>
+    <footer className="footer">
+      <div className='left_footer'>
+      <p>About</p>
+      <p>How it works</p>
+      <p>Linkedin</p>
+      </div>
+      <div className='right_footer'>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/terms">Cookies</a>
+      </div>
+    </footer>
   );
 };
 
