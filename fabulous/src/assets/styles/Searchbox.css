@@ -1,34 +1,130 @@
-.searchBoxContainer{
-    /* Search */
-    width: 100%;
+.searchBoxContainer {
+    width: 100%; /* Prend 70% de la largeur totale */
     box-sizing: border-box;
-    /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
-    width: 50%;
-    height: 150px;
+    padding: 10px;
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
-    border-radius: 2px;
+    border-radius: 4px;
     margin-top: 20px;
 }
 
 .input_searchBox {
+    width: 100%; 
+    padding: 8px;
+    border: none; 
+    font-size: 14px;
     font-family: 'Inter', sans-serif;
-    width: 100%; /* Assure que l'input prend toute la largeur de son conteneur */
-    border: none; /* Supprime la bordure */
-    padding: 10px; /* Optionnel : ajoute un peu de remplissage pour améliorer l'apparence */
-    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
-    outline: none; /* Supprime le contour lors du focus */
-    font-size: 16px; /* Ajuste la taille de la police, si nécessaire */
+    outline: none;
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+    resize: vertical; 
 }
 
-
-.input_searchBox:focus {
-    box-shadow: 0 0 5px rgba(76, 153, 255, 0.5); 
+.bottom_searchBox {
+    display: flex;
+    width: 100%;
+    gap: 10px; /* Espace entre les éléments */
+    align-items: center; /* Aligne verticalement les éléments */
 }
+
+.img_upload_button{
+    width: 12px;
+    color: #4FC49D;
+}
+
+.img_search_button{
+    width: 12px;
+    color: #4FC49D;
+}
+
+.custom-select {
+    flex: 3; /* Occupe 75% de l'espace */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #DDDDDD;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    color: #333333;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    appearance: none;
+}
+
+.custom-select::after {
+    content: "▼"; /* Icône de flèche */
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Position de la flèche */
+    transform: translateY(-50%); /* Centre verticalement */
+    pointer-events: none; /* Empêche la flèche d'être cliquée */
+    font-size: 12px;
+    color: #333333;
+}
+
+.button_searchBox {
+    display: flex;
+    flex: 1; /* Occupe 25% de l'espace */
+    gap: 5px; /* Espacement entre les deux boutons */
+}
+
+.button_upload, .button_search {
+    flex: 1; /* Chaque bouton prend la moitié de l'espace dans button_searchBox */
+    padding: 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+}
+
+.button_upload{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    color: #4FC49D;
+    border: solid 1px #4FC49D;
+    align-items: center;
+    gap: 2px;
+}
+
+.button_search {
+    background-color: #4FC49D;
+    align-items: center;
+    gap: 2px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Style pour le survol des boutons */
+.button_upload:hover, .button_search:hover {
+    background-color: #3b9a7d;
+}
+
+.button_upload:hover{
+    color: white;
+}
+
+.button_random{
+ font-family: 'Inter', sans-serif;
+ font-size: 12px;
+ appearance: none;
+ border: none;
+ background-color: transparent;
+ color: white;
+ cursor: pointer;
+}
+.button_random:hover{
+color: black;    
+}
+
 
 
 /* .searchBox {

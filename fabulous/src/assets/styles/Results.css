@@ -1,0 +1,39 @@
+/* results.css */
+
+.resultsContainer {
+    flex: 1; 
+    padding: 20px;
+    overflow-y: auto; 
+    text-align: left; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    background-color: #ffffff; 
+    color: #000000; 
+}
+
+.abSequence {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    padding: 10px; 
+    background-color: #f5f5f5; 
+    border-radius: 4px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+}
+
+h1 {
+    padding-top: 20px;
+    margin-bottom: 10px; 
+}
+
+pre {
+    background-color: #f5f5f5; 
+    padding: 10px;
+    border-radius: 4px; 
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+    padding-bottom: 0px;
+}
