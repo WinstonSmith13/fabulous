@@ -3,16 +3,18 @@ import { useState, useEffect } from "react";
 import "../assets/styles/Results.css";
 import { fetchAntibodyData } from "../services/antibodyService"; 
 import LoadingComponent from "../components/common/LoadingComponent.tsx";
+import { Circular, Linear, SeqViz } from "seqviz";
 
 
 export default function Results() {
 const location = useLocation();
 const { abSequence } = location.state || {};
 const [abDict, setAbDict] = useState(null);
-const [isLoading, setIsLoading] = useState(true); // Loader activé au départ
+const [isLoading, setIsLoading] = useState(true); 
+
 
 useEffect(() => {
-    // Lance la requête une fois que le composant est monté
+    
     async function loadData() {
         try {
             const data = await fetchAntibodyData(abSequence);
@@ -20,7 +22,7 @@ useEffect(() => {
         } catch (error) {
             console.error("Erreur lors du chargement des données", error);
         } finally {
-            setIsLoading(false); // Désactive le loader une fois les données chargées
+            setIsLoading(false); 
         }
     }
 
@@ -36,11 +38,17 @@ return (
             <LoadingComponent />
         ) : (
             <>
-                <h1>Results</h1>
+            <SeqViz
+    name="J23100"
+    seq="TTGACGGCTAGCTCAGTCCTAGGTACAGTGCTAGC"
+    annotations={[{ name: "promoter", start: 0, end: 34, direction: 1, color: "blue" }]}
+  />
+                {/* <h1>Results</h1>
                 <p className="abSequence">Sequence: {abSequence}</p>
-                {abDict && <pre>{JSON.stringify(abDict, null, 2)}</pre>}
+                {abDict && <pre>{JSON.stringify(abDict, null, 2)}</pre>} */}
             </>
         )}
     </div>
 );
 }
+
